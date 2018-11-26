@@ -18,6 +18,8 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
+
+
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -25,15 +27,14 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php else : ?>
 
-		<?php else : ?>
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<?php endif; ?>
+	
 
-		<?php endif; ?>
 
-		
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

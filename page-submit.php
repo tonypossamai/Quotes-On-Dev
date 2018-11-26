@@ -21,7 +21,7 @@ get_header(); ?>
 
 				<?php //else display ?>
 
-					<!--  MESSAGE: Sorry you must be logged in to submit a quote! -->
+					<input><!--  MESSAGE: Sorry you must be logged in to submit a quote! -->
 
 				<?php // endif; ?>
 

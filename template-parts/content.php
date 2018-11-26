@@ -6,29 +6,44 @@
  */
 
 // Code to set variable for source and source url (get_post_meta). They will be echoed inside the IF ELSE Statements below
+
+$source = get_post_meta( get_the_ID(), '_qod_quote_source', true );
+$source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php //get the content ?>
-
-	<?php 
-		// If statement: if the_source and the_source_url field are not empty, then show them
-		// else statement: Else if the source only has content show the source only
-		// Else show empty span
-	?>
-
 	<div class="entry-content">
+		<p><?php the_content();?></p>
+	</div>
 
-	</div><!-- .entry-content -->
+	<div class="entry-meta">
+		<h2 class="entry-title">– <?php the_title(); ?>,<h2> 
+	</div>
+
+	<?php if (!empty($source) && (!empty($source_url))) : ?>
+		
+		<span class="source"><a class="source-url" href="<?php echo $source_url?>"><?php echo $source ?></a></span>
+
+	<?php elseif (!empty($source) && (empty($source_url))) : ?>
+		<span class="source"><?php echo $source ?></a></span>
+
+	<?php else : ?>
+	
+		<span></span>
+
+	<?php endif; ?>
+
+	
 </article><!-- #post-## -->
 
-<!-- if else statement to change in between Arquive and Home page -->
+<!-- if else statement to change in between Archive and Home page -->
 
-<?php // if is_home() or is_single() ?>
+<?php if (is_home() || is_single()) : ?>
 
-	<!-- show button that loads another post -->
+	<button class="new-quote-button">Show me another!</button> <!-- show button that loads another post -->
 
-	<button class="new-quote-button">Show me another!</button>
+<?php else : ?>
+	<span></span>
 
-<?php // end if; ?>
+<?php endif; ?>

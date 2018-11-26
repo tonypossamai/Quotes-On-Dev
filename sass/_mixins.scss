@@ -1,6 +1,51 @@
-// Center block
+/* Center block */
 @mixin center-block {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/* BREAKPOINTS */
+
+$desktop-width: 1240px;
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+$tablet-width: 600px;
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+
+}
+
+$mobile-width: 320px;
+@mixin mobile {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+
+/* FONTS MIXINS */
+
+@mixin font-exo {
+	font-family: 'Exo';
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin font-exo-light {
+	font-family: 'Exo';
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin font-exo-light-italic {
+	font-family: 'Exo';
+    font-weight: 300;
+    font-style: italic;
 }

@@ -22,8 +22,15 @@
 
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+
+					<div class="logo">
+					
+						<h1 class="site-title screen-reader-text"></h1>
+
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"rel="home"><img src="<?php echo get_bloginfo( 'template_directory' );?>/assets/qod-logo.svg"></a>
+						
+					</div>
+
 				</div><!-- .site-branding -->
 
 
