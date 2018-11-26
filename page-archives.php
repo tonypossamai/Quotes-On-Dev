@@ -43,7 +43,8 @@ get_header(); ?>
 			<section class="category-archives clearfix">
 				<h2>Categories</h2>
 					<!-- Display Categories links here to show archive of posts of this category -->
-					<?php wp_tag_cloud( array('taxonomy' => 'category', 'posts_per_page' => -1, 'smallest' => 15, 'largest' => 15) ); ?>
+					<?php wp_tag_cloud( array('taxonomy' => 'category', 'posts_per_page' => -1, 'smallest' => 15, 'largest' => 15) );
+					?>
 		
 
 				

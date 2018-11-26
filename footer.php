@@ -10,18 +10,12 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-			
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					<div class="menu-menu-1-container">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					</div>
+				
+				<div class="site-info">
+				<nav id="site-navigation" class="main-navigation menu-main-navigation-container" role="navigation">			
+						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>			
 				</nav><!-- #site-navigation -->
-
-
-					<p><?php printf( esc_html( 'Brought to you by %s' ), 'Tony Possamai' ); ?>
-						<a href="<?php echo esc_url( 'https://github.com/tonypossamai' ); ?>"></a>
-					</p>
+					<p>Brought to you by <a href="<?php echo esc_url( 'https://github.com/tonypossamai' ); ?>"><?php the_author()?></a></p>
 				</div><!-- .site-info -->
 
 			</footer><!-- #colophon -->
@@ -31,3 +25,7 @@
 
 	</body>
 </html>
+
+	<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<?php echo esc_html( 'Primary Menu' ); ?>
+		</button> -->

@@ -26,7 +26,7 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 		<span class="source"><a class="source-url" href="<?php echo $source_url?>"><?php echo $source ?></a></span>
 
 	<?php elseif (!empty($source) && (empty($source_url))) : ?>
-		<span class="source"><?php echo $source ?></a></span>
+		<span class="source"><?php echo $source ?></span>
 
 	<?php else : ?>
 	
