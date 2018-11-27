@@ -14,22 +14,18 @@
                 cache: false
             }).done(function(data) {
          
-                const post = data.shift();
-                console.log(post._qod_quote_source);
-
-                entryContent = post.content.rendered; 
-                title = post.title.rendered;
-                quoteSource = post._qod_quote_source;
+                const post = data.shift(),
+                entryContent = post.content.rendered,
+                title = post.title.rendered,
+                quoteSource = post._qod_quote_source,
                 quoteSourceUrl = post._qod_quote_source_url;
-               
+                
                 $('.entry-content').html(entryContent);
                 $('.entry-meta').html('<h2>- ' + title + '</h2>');
                 
                 $('.source').html('<a class="source-url" href="' + quoteSourceUrl + '">' + quoteSource + '</a>');
-                //$('.source-url').html(quoteSourceUrl);
-
                 
-
+                
                 // get the first and only post array
 
                 // update the quote content and name of the quoted person
@@ -47,36 +43,45 @@
     /* Ajax-based front-end post submissions */
 
         $(function() {
-            // Event on submit of the form
-            const data = {
-                title: $('#update-title').val(),
-                content: $('#quote-content').val(),
-                _qod_quote_source: $('#quote-source').val(),
-                _qod_quote_source_url: $('#quote-source-url').val(),
-                post_status: 'pending'
-              };
-            $('form').on('submit', function() {
+           
+                
+            $('#submit-form').on('submit', function(event) {
+                event.preventDefault();
+                const data = {
+                    title: $('#author-name-field').val(),
+                    content: $('#quote-content-field').val(),
+                    _qod_quote_source: $('#quote-source-field').val(),
+                    _qod_quote_source_url: $('#quote-url-field').val(),
+                    post_status: 'pending' 
+                };
                 $.ajax({
                     method: 'POST',
                     url: api_vars.root_url + 'wp/v2/posts',
-                    data,
+                    data: data,
                     beforeSend: function(xhr) {
                         xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
                     }
     
                 }).done(function() {
-                    // clear the form fields and hide the form
-                    //Use jquey to hide the form in a slidey way
+                    
+
+                    $('#submit-form').slideUp().find('input, [type="submit"], [type="text"]').val('');
+
+                    $('.success-message').text(api_vars.success);
+                    
+                    // Use jquey to hide the form in a slidey way
+
+                    // Clear the form fields and hide the form
     
-                    //show success message using the var from functions.php
+                    // show success message using the var from functions.php
     
     
                 }).fail(function() {
+
+                    $('.sorry-message').text(api_vars.failure);
                     // post and alert wih failure var from functions.php
                 })
             });
         });
     
 })(jQuery);
-              
-    

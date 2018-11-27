@@ -261,13 +261,25 @@ input,
 select,
 textarea {
   color: #fff;
-  font-family: sans-serif;
+  font-family: 'Exo';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  font-family: 'Exo';
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
+
+h2 {
+  font-family: 'Exo';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem; }
 
 /* Copy */
 p {
@@ -487,19 +499,6 @@ a {
     display: block;
     text-decoration: none; }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
-
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -520,8 +519,7 @@ a {
   width: 50%; }
 
 .menu-main-navigation-container {
-  display: block;
-  width: 960px; }
+  display: block; }
   .menu-main-navigation-container ul {
     display: inline; }
     .menu-main-navigation-container ul li a {
@@ -538,6 +536,11 @@ a {
   list-style: none;
   margin: 1rem 0 0;
   padding: 0; }
+
+/* HEADER */
+.logo img {
+  display: block;
+  width: 300px; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -620,14 +623,26 @@ a {
 .group-blog .byline {
   display: inline; }
 
-.page-content,
-.entry-content,
-.entry-summary {
+.page-content, .entry-content, .entry-summary {
   margin: 1.5rem 0 0; }
 
 .page-links {
   clear: both;
   margin: 0 0 1.5rem; }
+
+.archive .entry-content p, .blog .entry-content p, .single .entry-content p {
+  font-size: 1.25rem; }
+
+.archive .entry-title, .blog .entry-title, .single .entry-title {
+  display: inline;
+  font-size: 1.25rem;
+  font-weight: 500; }
+
+.archive .entry-meta, .blog .entry-meta, .single .entry-meta {
+  margin-bottom: 3rem; }
+
+.blog .entry-content, .page .entry-title {
+  margin-top: 3rem; }
 
 /*--------------------------------------------------------------
 # Media

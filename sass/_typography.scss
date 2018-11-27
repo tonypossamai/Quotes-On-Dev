@@ -8,15 +8,29 @@ input,
 select,
 textarea {
 	color: $color__text-main;
-	font-family: $font__main;
+	font-family: 'Exo';
+	font-weight: 300;
+    font-style: normal;
 	font-size: 1rem;
 	line-height: $font__line-height-body;
+
+		color: #fff;
+		font-family: 'Exo';
+		font-size: 1rem;
+		line-height: 1.5;
+	
 }
 
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+}
+h2 {
+	font-family: 'Exo';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.25rem;
 }
 
 /* Copy */

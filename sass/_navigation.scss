@@ -76,21 +76,6 @@ a {
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -111,9 +96,8 @@ a {
 		width: 50%;
 	}
 }
-
 .menu-main-navigation-container { 
-	display: block; width:960px;
+	display: block;
 		ul { 
 		display:inline;
 
@@ -127,11 +111,16 @@ a {
 		}
 	}	
 }
-
 .menu {
-
 	display: inline-flex;
 	list-style: none;
 	margin: 1rem 0 0;
 	padding: 0;
+}
+
+/* HEADER */
+
+.logo img {
+    display: block;
+    width: 300px;
 }

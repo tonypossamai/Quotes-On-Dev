@@ -21,13 +21,29 @@
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
+.page-content, .entry-content, .entry-summary {
 	margin: $base__space-unit 0 0;
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 $base__space-unit;
+}
+
+.archive .entry-content p, .blog .entry-content p, .single .entry-content p {
+    font-size: 1.25rem;
+}
+
+.archive .entry-title, .blog .entry-title, .single .entry-title {
+    display: inline;
+    font-size: 1.25rem;
+	font-weight: 500;
+}
+
+.archive .entry-meta, .blog .entry-meta, .single .entry-meta {
+    margin-bottom: 3rem;
+}
+
+.blog .entry-content, .page .entry-title {
+    margin-top: $base__space-unit * 2;
 }
