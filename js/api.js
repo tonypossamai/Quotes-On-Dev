@@ -21,7 +21,7 @@
                 quoteSourceUrl = post._qod_quote_source_url;
                 
                 $('.entry-content').html(entryContent);
-                $('.entry-meta').html('<h2>- ' + title + '</h2>');
+                $('.entry-meta').html('<h2 class="entry-title">– ' + title + '</h2>');
                 $('.source').html(', <a class="source-url" href="' + quoteSourceUrl + '">' + quoteSource + '</a>');
                 
                 

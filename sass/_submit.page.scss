@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------
+# Submit a Quote Page
+--------------------------------------------------------------*/
+
+form#submit-form {
+	p {
+		margin-bottom: $base__space-unit / 4;
+	}
+	input, textarea {
+		margin-bottom: $base__space-unit / 2;
+	}
+	.submit-button {
+		margin-top: $base__space-unit;
+		&:focus{
+			outline: none;
+		}
+	}
+}
+

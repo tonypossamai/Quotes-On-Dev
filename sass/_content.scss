@@ -26,6 +26,14 @@
 	margin: 0 0 $base__space-unit;
 }
 
+.hentry {
+    margin: 0px 0 1.5rem;
+}
+
+.blog .entry-content, .page .entry-title {
+    margin-top: $base__space-unit * 2;
+}
+
 .archive .entry-content p, .blog .entry-content p, .single .entry-content p {
 	font-size: $base_font_size;
 }
@@ -40,16 +48,12 @@
     margin-bottom: 0;
 }
 
-.blog .entry-content, .page .entry-title {
-    margin-top: $base__space-unit * 2;
-}
-
 .archive .source, .blog .source, .single .source {
     font-size: $base_font_size;
     font-style: italic;
 }
 
-.entry-summary, .page-content {
+.entry-content, .entry-summary, .page-content {
     margin: 1.5rem 0 0;
 }
 
@@ -59,37 +63,5 @@
 
 	.source {
 		line-height: 0.75rem;
-	}
-}
-
-
-
-/* ARCHIVE PAGE */
-
-.category-archives ul, .post-archives ul, .tag-archives ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-.post-archives ul li {
-    font-size: 1rem;
-    margin-bottom: .5rem;
-    margin-right: 1.125rem;
-}
-
-.display-categories, .display-tags{
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0;
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 1.5rem;
-
-	a.tag-cloud-link {
-		font-size: 1rem;
-		margin-bottom: .5rem;
-		margin-right: 1.125rem;
 	}
 }

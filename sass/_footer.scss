@@ -38,8 +38,8 @@
 
 			a {
 				width: 200px;
-			}
-		}
+				}
+			}	
 
 		li:hover > ul,
 		li.focus > ul {
@@ -64,12 +64,10 @@
 		margin: 0 0 $base__space-unit;
 		overflow: hidden;
 	}
-
 	.nav-previous {
 		float: left;
 		width: 50%;
 	}
-
 	.nav-next {
 		float: right;
 		text-align: right;

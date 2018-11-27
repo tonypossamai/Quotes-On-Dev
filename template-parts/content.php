@@ -20,7 +20,7 @@ $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true );
 
 	<div class="entry-meta">
 
-			<h2 class="entry-title"><?php the_title();?></h2>
+			<h2 class="entry-title">–<?php the_title();?></h2>
 
 		</div>
 		<?php if ($source && $source_url) : ?>
