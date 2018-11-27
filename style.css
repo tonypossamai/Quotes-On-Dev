@@ -532,11 +532,11 @@ a {
   margin: 0 0 1.5rem; }
 
 .archive .entry-content p, .blog .entry-content p, .single .entry-content p {
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
 
 .archive .entry-title, .blog .entry-title, .single .entry-title {
   display: inline;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 300; }
 
 .archive .entry-meta, .blog .entry-meta, .single .entry-meta {
@@ -546,7 +546,7 @@ a {
   margin-top: 3rem; }
 
 .archive .source, .blog .source, .single .source {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-style: italic; }
 
 .entry-summary, .page-content {
@@ -559,6 +559,37 @@ a {
   line-height: 0.75rem; }
   .entry-meta .source {
     line-height: 0.75rem; }
+
+/* ARCHIVE PAGE */
+.category-archives ul, .post-archives ul, .tag-archives ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.post-archives ul li {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+  margin-right: 1.125rem; }
+
+.display-categories, .display-tags {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1.5rem; }
+  .display-categories a.tag-cloud-link, .display-tags a.tag-cloud-link {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    margin-right: 1.125rem; }
 
 /*--------------------------------------------------------------
 # Media

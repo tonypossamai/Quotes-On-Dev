@@ -9,7 +9,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
 			<section class="browse-archives">
 				<header class="entry-header">
 				<h1 class="entry-title"><?php echo the_title(); ?></h1>
@@ -42,27 +41,20 @@ get_header(); ?>
 
 			<section class="category-archives clearfix">
 				<h2>Categories</h2>
-					<!-- Display Categories links here to show archive of posts of this category -->
-					<?php wp_tag_cloud( array('taxonomy' => 'category', 'posts_per_page' => -1, 'smallest' => 15, 'largest' => 15) );
-					?>
-		
-
-				
+				<div class="display-categories">
+						<!-- Display Categories links here to show archive of posts of this category -->
+					<?php wp_tag_cloud( array('taxonomy' => 'category', 'posts_per_page' => -1, 'smallest' => 12, 'largest' => 12) );?>	
+				</div>
 			</section>
 
-			<section>
+			<section class="category-archives clearfix">	
+				<h2>Tags</h2>
 				<div class="display-tags">
-					<h2>Tags</h2>
-					<?php wp_tag_cloud( 'smallest=15&largest=15' ); ?>
-					<!-- Display Tags links here to show archive of posts of this tag -->
-					<?php 
-						// Use the Wordpress method to show a tag cloud
-						// NO LOOP REQUIRED						
-					?>
+					<?php wp_tag_cloud( 'smallest=12&largest=12' ); //Use the Wordpress method to show a tag cloud NO LOOP REQUIRED?>			
 				</div>
 			</section>
 
 		</main><!-- #main -->
+		<?php get_footer(); ?>
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>

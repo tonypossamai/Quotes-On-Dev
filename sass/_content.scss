@@ -61,3 +61,35 @@
 		line-height: 0.75rem;
 	}
 }
+
+
+
+/* ARCHIVE PAGE */
+
+.category-archives ul, .post-archives ul, .tag-archives ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.post-archives ul li {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    margin-right: 1.125rem;
+}
+
+.display-categories, .display-tags{
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1.5rem;
+
+	a.tag-cloud-link {
+		font-size: 1rem;
+		margin-bottom: .5rem;
+		margin-right: 1.125rem;
+	}
+}
