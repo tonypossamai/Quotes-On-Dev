@@ -22,8 +22,7 @@
                 
                 $('.entry-content').html(entryContent);
                 $('.entry-meta').html('<h2>- ' + title + '</h2>');
-                
-                $('.source').html('<a class="source-url" href="' + quoteSourceUrl + '">' + quoteSource + '</a>');
+                $('.source').html(', <a class="source-url" href="' + quoteSourceUrl + '">' + quoteSource + '</a>');
                 
                 
                 // get the first and only post array
@@ -65,7 +64,7 @@
                 }).done(function() {
                     
 
-                    $('#submit-form').slideUp().find('input, [type="submit"], [type="text"]').val('');
+                    $('#submit-form').slideUp().find('textarea, input[type="submit"], input[type="text"]').val('');
 
                     $('.success-message').text(api_vars.success);
                     

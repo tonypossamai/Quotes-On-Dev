@@ -6,8 +6,8 @@
 
 a {
 	color: $color__link;
-
-
+	text-decoration: none;
+	
 	&:hover,
 	&:focus,
 	&:active {

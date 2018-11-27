@@ -23,7 +23,7 @@ get_header(); ?>
 						<input type="text" id="author-name-field"/>
 
 						<p>Quote</p>
-						<input type="text" id="quote-content-field"/>
+						<textarea type="text" id="quote-content-field"></textarea>
 
 						<p>Where did you find this quote? (e.g. book name)</p>
 						<input type="text" id="quote-source-field"/>
