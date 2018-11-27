@@ -275,11 +275,14 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h1 {
+  font-weight: 400; }
+
 h2 {
   font-family: 'Exo';
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 /* Copy */
 p {
@@ -357,7 +360,7 @@ ol {
   margin: 0 0 1.5rem 3rem; }
 
 ul {
-  list-style: disc; }
+  list-style: none; }
 
 ol {
   list-style: decimal; }
@@ -393,7 +396,9 @@ table {
 button,
 input[type=button],
 input[type=reset],
-input[type=submit] {
+input[type=submit],
+input[type=text],
+textarea[type=text] {
   background-color: #222;
   border: 2px solid #0c0;
   border-radius: 3px;
@@ -415,6 +420,18 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+/* Submit a Quote Page */
+form#submit-form p {
+  margin-bottom: 0.375rem; }
+
+form#submit-form input, form#submit-form textarea {
+  margin-bottom: 0.75rem; }
+
+form#submit-form .submit-button {
+  margin-top: 1.5rem; }
+  form#submit-form .submit-button:focus {
+    outline: none; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -428,86 +445,6 @@ a {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
-
-/* Menus */
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5rem;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
-
-.menu-main-navigation-container {
-  display: block; }
-  .menu-main-navigation-container ul {
-    display: inline; }
-    .menu-main-navigation-container ul li a {
-      line-height: 15px;
-      border-right: 1px solid #fff;
-      padding: 0px 1rem; }
-    .menu-main-navigation-container ul li:last-child > a {
-      border-right: none; }
-
-.menu {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  list-style: none;
-  margin: 1rem 0 0;
-  padding: 0; }
-
-/* HEADER */
-.logo img {
-  display: block;
-  width: 300px; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -595,27 +532,33 @@ a {
   margin: 0 0 1.5rem; }
 
 .archive .entry-content p, .blog .entry-content p, .single .entry-content p {
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 .archive .entry-title, .blog .entry-title, .single .entry-title {
   display: inline;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 300; }
 
 .archive .entry-meta, .blog .entry-meta, .single .entry-meta {
-  margin-bottom: 3rem; }
+  margin-bottom: 0; }
 
 .blog .entry-content, .page .entry-title {
   margin-top: 3rem; }
 
 .archive .source, .blog .source, .single .source {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-style: italic; }
+
+.entry-summary, .page-content {
+  margin: 1.5rem 0 0; }
 
 .entry-meta {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-  display: inline-flex; }
+  display: inline-flex;
+  line-height: 0.75rem; }
+  .entry-meta .source {
+    line-height: 0.75rem; }
 
 /*--------------------------------------------------------------
 # Media
@@ -647,6 +590,83 @@ object {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+/* Menus */
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%; }
+  .main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    .main-navigation ul ul {
+      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5rem;
+      left: -999rem;
+      z-index: 99999; }
+      .main-navigation ul ul ul {
+        left: -999rem;
+        top: 0; }
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
+        left: 100%; }
+      .main-navigation ul ul a {
+        width: 200px; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
+  .main-navigation li {
+    float: left;
+    position: relative; }
+  .main-navigation a {
+    display: block;
+    text-decoration: none; }
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5rem;
+  overflow: hidden; }
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+.menu-main-navigation-container {
+  display: block; }
+  .menu-main-navigation-container ul {
+    display: inline; }
+    .menu-main-navigation-container ul li a {
+      line-height: 15px;
+      border-right: 1px solid #fff;
+      padding: 0 1rem 0; }
+    .menu-main-navigation-container ul li:first-child > a {
+      padding-left: 0; }
+    .menu-main-navigation-container ul li:last-child > a {
+      border-right: none; }
+
+.menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0; }
+
 .site-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -654,6 +674,11 @@ object {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 4.5rem 0 3rem; }
+
+button.new-quote-button {
+  margin-top: 3rem; }
+  button.new-quote-button:focus {
+    outline: none; }
 
 /* All Archives Page */
 /* Submit a Quote Page */

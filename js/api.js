@@ -41,8 +41,7 @@
 
     /* Ajax-based front-end post submissions */
 
-        $(function() {
-           
+        $(function() {   
                 
             $('#submit-form').on('submit', function(event) {
                 event.preventDefault();

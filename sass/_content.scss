@@ -37,16 +37,27 @@
 }
 
 .archive .entry-meta, .blog .entry-meta, .single .entry-meta {
-    margin-bottom: $base__space-unit * 2;
+    margin-bottom: 0;
 }
 
 .blog .entry-content, .page .entry-title {
     margin-top: $base__space-unit * 2;
 }
+
 .archive .source, .blog .source, .single .source {
     font-size: $base_font_size;
     font-style: italic;
 }
+
+.entry-summary, .page-content {
+    margin: 1.5rem 0 0;
+}
+
 .entry-meta {
 	display: inline-flex;
+	line-height: 0.75rem;
+
+	.source {
+		line-height: 0.75rem;
+	}
 }

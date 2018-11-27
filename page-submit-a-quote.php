@@ -12,7 +12,7 @@ get_header(); ?>
 
 			<section>
 				<header>
-					<div class="page-title"><?php the_title(); ?></div>
+					<h1 class="entry-title page-title"><?php the_title(); ?></h1>
 				</header>
 
 				<?php if (is_user_logged_in() && current_user_can('edit_posts')) : ?>
