@@ -2,42 +2,37 @@
 # Archive Page
 --------------------------------------------------------------*/
 
-.category-archives ul, .post-archives ul, .tag-archives ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-.post-archives ul li {
-    font-size: 1rem;
-    margin-bottom: .5rem;
-    margin-right: 1.125rem;
-}
+.browse-archives {
 
-.display-categories, .display-tags{
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0;
-	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 1.5rem;
+    .post-archives ul, .display-categories, .display-tags {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .post-archives ul li {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+        margin-right: 1.125rem;
 
-	a.tag-cloud-link {
-		font-size: 1rem;
-		margin-bottom: .5rem;
-		margin-right: 1.125rem;
-	}
-}
-.archive .page-title {
-    border-bottom: 1px dotted #fff;
-    margin-top: 3rem;
-    padding-bottom: 1.5rem;
-}
-.archive .hentry {
-    border-bottom: 1px dotted #fff;
-}
+        @include tablet {
+            font-size: 1.25rem;
+        }
 
-.archive .entry-meta {
-    margin-bottom: 3rem;
+    }
+
+    .display-categories, .display-tags{
+        margin-bottom: 1.5rem;
+
+        a.tag-cloud-link {
+            font-size: 1rem;
+            margin-bottom: .5rem;
+            margin-right: 1.125rem;
+            
+            @include tablet {
+                font-size: 1.25rem !important;
+            }
+        }
+    }
 }

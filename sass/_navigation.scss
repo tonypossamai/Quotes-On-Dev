@@ -2,7 +2,22 @@
 # Navigation
 --------------------------------------------------------------*/
 
-/* Links */
+.number-pagination {
+	margin-top: 3rem;
+	
+	a {
+		padding: 0 .25rem;
+	}
+	span {
+		padding: 0 .25rem;
+
+	&:first-child {
+		padding-left: 0;
+		}
+	}
+}
+
+/*---------------------------- Links ---------------------------- */
 
 a {
 	color: $color__link;
@@ -21,4 +36,25 @@ a {
 		outline: 0;
 	}
 }
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 $base__space-unit;
+		overflow: hidden;
+	}
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+
 

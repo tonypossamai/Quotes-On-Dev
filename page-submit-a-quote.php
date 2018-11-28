@@ -33,12 +33,13 @@ get_header(); ?>
 
 						<input type="submit" class="submit-button" value="Submit quote"/>
 					</form>
-	
+
 					<p class="success-message"></p>
+					<p class="sorry-message"></p>
 
 				<?php else : ?>
 
-					<p class="sorry-message"></p>
+					<p>Sorry, you must be logged in to submit a quote!</p>
             		<a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Click here to login</a>
 
 				<?php endif; ?>

@@ -2,11 +2,8 @@
 # Forms
 --------------------------------------------------------------*/
 
-/* Buttons and Fields */
 
-#new-quote-button {
-    display: block;
-}
+/*---------------------------- Buttons and Fields ---------------------------- */
 
 button, 
 input[type=button], 
@@ -22,7 +19,11 @@ textarea[type=text] {
     font-weight: 500;
     line-height: 1;
 	padding: .75rem 2.25rem;
-	margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    
+    @include tablet {
+         font-size: 1.25rem;
+    }
 }
 
 input[type=search] {
@@ -48,7 +49,11 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"] {
-	padding: 3px;
+    padding: 3px;
+
+    @include tablet {
+        width: 65%;
+    }
 }
 
 .search-form input[type=search] {
@@ -69,4 +74,22 @@ fieldset {
 label {
     display: block;
     margin-bottom: .75rem;
+}
+
+/*---------------------------- New Quote Button ---------------------------- */
+
+#new-quote-button {
+    display: block;
+		&:focus{
+			outline: none;
+	}
+}	
+
+button.new-quote-button {
+	margin-top: $base__space-unit;
+
+	@include desktop {
+        margin: 3rem auto 0 auto;
+        display: block;
+    }	
 }

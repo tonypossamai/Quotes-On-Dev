@@ -60,12 +60,17 @@
                         xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
                     }
     
-                }).done(function() {
+                }).done(function(data, statusText, xhr) {
                     
-
                     $('#submit-form').slideUp().find('textarea, input[type="submit"], input[type="text"]').val('');
 
-                    $('.success-message').text(api_vars.success);
+                    const status = xhr.status;
+
+                    if (status === 201) {
+                        
+                        $('.sorry-message').hide();
+                        $('.success-message').text(api_vars.success);
+                    }
                     
                     // Use jquey to hide the form in a slidey way
 
@@ -73,13 +78,11 @@
     
                     // show success message using the var from functions.php
     
-    
                 }).fail(function() {
 
                     $('.sorry-message').text(api_vars.failure);
                     // post and alert wih failure var from functions.php
                 })
             });
-        });
-    
+        });    
 })(jQuery);

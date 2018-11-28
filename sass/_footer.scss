@@ -55,30 +55,14 @@
 	}
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 $base__space-unit;
-		overflow: hidden;
-	}
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-}
-
-
 .site-info {
     display: flex;
     flex-wrap: wrap;
 	margin: 4.5rem 0 3rem;
+
+	@include desktop {
+		justify-content: flex-end;
+	}
 
 	p {
 		flex: 0 1 100%;
@@ -112,9 +96,4 @@
 	}
 }
 
-button.new-quote-button {
-	margin-top: $base__space-unit * 2;
-	&:focus{
-		outline: none;
-	}
-}
+
