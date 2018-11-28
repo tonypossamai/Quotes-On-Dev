@@ -2,3 +2,23 @@
 # 404 Page
 --------------------------------------------------------------*/
 
+.search-form label {
+    float: left;
+    min-width: 200px;
+}
+.search-submit {
+    border: 0;
+    float: left;
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+
+    &:before {
+        content: "\f002";
+    }
+}

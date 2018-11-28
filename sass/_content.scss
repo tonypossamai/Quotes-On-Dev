@@ -36,7 +36,12 @@
 
 .archive .entry-content p, .blog .entry-content p, .single .entry-content p {
 	font-size: $base_font_size;
+
+	@include tablet {
+		font-size: $tablet_font_size;
+	}
 }
+
 
 .archive .entry-title, .blog .entry-title, .single .entry-title {
     display: inline;

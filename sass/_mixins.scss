@@ -1,4 +1,5 @@
 /* Center block */
+
 @mixin center-block {
 	display: block;
 	margin-left: auto;
@@ -7,22 +8,17 @@
 
 /* BREAKPOINTS */
 
-$desktop-width: 1240px;
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;
   }
 }
 
-$tablet-width: 600px;
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
   }
-
 }
-
-
 
 /* FONTS MIXINS */
 
