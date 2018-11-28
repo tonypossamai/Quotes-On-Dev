@@ -10,14 +10,13 @@ form#submit-form {
 		margin-bottom: $base__space-unit / 2;
 	}
 	.submit-button {
+		display: flex;
+		margin-top: 0.5rem;
 		margin-top: $base__space-unit;
 		&:focus{
 			outline: none;
 		}
-		@include tablet {
-			display: flex;
-			margin-top: 0.5rem;
-		}
 	}
 }
+
 

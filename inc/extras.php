@@ -47,6 +47,7 @@ function qod_posts_per_page($query) {
     }
     elseif (is_home() || is_single()) {
         $query->set('posts_per_page', 1);
+        $query->set('orderby', 'rand');
     }
 }
 add_action ('pre_get_posts', 'qod_posts_per_page');

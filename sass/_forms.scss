@@ -5,12 +5,7 @@
 
 /*---------------------------- Buttons and Fields ---------------------------- */
 
-button, 
-input[type=button], 
-input[type=reset], 
-input[type=submit],
-input[type=text],
-textarea[type=text] {
+input[type=submit] {
     background-color: #222;
     border: 2px solid #0c0;
     border-radius: 3px;
@@ -20,7 +15,31 @@ textarea[type=text] {
     line-height: 1;
 	padding: .75rem 2.25rem;
     margin-bottom: 1.5rem;
+
+    @include tablet {
+        font-size: 1.25rem;
+   }
+}
+
+button, 
+input[type=button], 
+input[type=reset], 
+input[type=text],
+textarea[type=text] {
+    background-color: #222;
+    border: 2px solid #0c0;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+	padding: .75rem 2.25rem;
+    margin-bottom: 1.5rem;
     
+    &::selection {
+        color: #0c0;
+      }
+
     @include tablet {
          font-size: 1.25rem;
     }
@@ -45,10 +64,10 @@ textarea:focus {
     border-color: #fcfcd2;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"] {
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
     padding: 3px;
 
     @include tablet {
@@ -86,7 +105,9 @@ label {
 }	
 
 button.new-quote-button {
-	margin-top: $base__space-unit;
+    margin-top: $base__space-unit;
+    color: #0c0;
+    
 
 	@include desktop {
         margin: 3rem auto 0 auto;

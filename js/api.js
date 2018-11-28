@@ -3,10 +3,17 @@
 
     // Ajax-based ramdon post fetching.
 
+
     $(function(){ 
+
+        let lastPage = '';
+
         $('body').on('click', '.new-quote-button', function(event){
             event.preventDefault();
+            
+            lastPage = document.URL;
 
+            // make back and forward nav work with the history API
 
             $.ajax({
                 method: 'get',
@@ -18,12 +25,14 @@
                 entryContent = post.content.rendered,
                 title = post.title.rendered,
                 quoteSource = post._qod_quote_source,
-                quoteSourceUrl = post._qod_quote_source_url;
+                quoteSourceUrl = post._qod_quote_source_url,
+                postLink = post.link;
                 
                 $('.entry-content').html(entryContent);
                 $('.entry-meta').html('<h2 class="entry-title">– ' + title + '</h2>');
                 $('.source').html(', <a class="source-url" href="' + quoteSourceUrl + '">' + quoteSource + '</a>');
-                
+            
+                history.pushState(null, null, post.link);
                 
                 // get the first and only post array
 
@@ -36,6 +45,10 @@
                 // make the back and forward nav work with the history API    
 
             }); 
+        });
+
+        $(window).on('popstate', function () {
+            window.location.replace(lastPage);
         });
     });
 

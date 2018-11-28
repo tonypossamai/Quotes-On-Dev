@@ -19,7 +19,7 @@
 
 /*---------------------------- Links ---------------------------- */
 
-a {
+a, .success-message, .failure-message {
 	color: $color__link;
 	text-decoration: none;
 	
