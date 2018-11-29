@@ -1,23 +1,52 @@
-# Quotes on Dev Starter
+## Beer API Website Project
+<br>
+<br>
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
 
-## Installation
+### 1.The Project
 
-### 1. Download me (don't clone me!)
+### 2.Used Tools
 
-Then add me to your `wp-content/themes` directory.
+### 3.Personal Learnings
 
-### 2. Rename the `quotesondev-starter-master` directory
+<br>
+<br>
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
+---
+## 1.The Project
 
-### 3. Install the dev dependencies
+The project is about creating a responsive website using WordPress. Quotes on Dev is a website that generates random quotes from different authors. The website has a archive page where the user can find all the authors, categories and tags related to the quotes. Also in the "Submit a Quote" page the user is able to generate a quote (post) by filling out the form fields.
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
+Following the project requirements and the RWD principles, three breakpoints for the website have been created:
+<br>
+- Mobile (375px)
+- Tablet (620px)
+- Desktop (1080px)
+<br>
+<br>
 
-### 4. Update the proxy in `gulpfile.js`
+---
+## 2.Used Tools
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+- WordPress
+- HTML5
+- CSS3
+- SASS
+- Ajax
+- JavaScript
+- jQuery
+- Gulp
+- PHP
+- Git / GitHub
+<br>
+<br>
 
-And now would be a good time to `git init` :)
+
+---
+## 3.Personal Learnings
+
+In this projects, I've learnt how to use WordPress and its installation processess in order to get the project started. With the WP template tags I managed to bring all the information needed through if else statements and while loops, where I had a better understanding of how to bring the content that I need to the righ webpage.
+<br>
+<br>
+
+
